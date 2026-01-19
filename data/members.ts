@@ -1,6 +1,6 @@
 export type Member = {
     role: { en: string; zh: string };
-    lab: "MDRE" | "SSAT" | "Both";
+    lab: "MDRE" | "SSAT" | "MDRE-SSAT";
     startYear: string;
     name: { en: string; zh: string };
     image?: string;
@@ -24,8 +24,8 @@ export const members: Member[] = [
         image: "/images/yi-jia-lin.jpg",
         link: "https://innc.ntust.edu.tw/p/405-1111-120617,c11556.php?Lang=en"
     },
-    { role: { en: "Secretary", zh: "秘書" }, lab: "Both", startYear: "NA", name: { en: "Sunny Lin", zh: "林季樺" } },
-    { role: { en: "Assistant", zh: "助理" }, lab: "Both", startYear: "NA", name: { en: "Li-Hsin Tang", zh: "唐笠馨" } },
+    { role: { en: "Secretary", zh: "秘書" }, lab: "MDRE-SSAT", startYear: "NA", name: { en: "Sunny Lin", zh: "林季樺" } },
+    { role: { en: "Assistant", zh: "助理" }, lab: "MDRE-SSAT", startYear: "NA", name: { en: "Li-Hsin Tang", zh: "唐笠馨" } },
     { role: { en: "Master", zh: "碩士" }, lab: "MDRE", startYear: "2023", name: { en: "Hsiang-Hsin Wei", zh: "魏祥興" } },
     { role: { en: "Master", zh: "碩士" }, lab: "MDRE", startYear: "2023", name: { en: "Zoe Chung", zh: "鐘若瑜" } },
     { role: { en: "Master", zh: "碩士" }, lab: "MDRE", startYear: "2024", name: { en: "Hank Huang", zh: "黃冠瀚" } },

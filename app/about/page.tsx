@@ -13,108 +13,82 @@ export default function AboutPage() {
                     <h1 className="text-4xl font-extrabold text-gray-900 mb-6 tracking-tight">
                         MDRE-SSAT
                     </h1>
-                    <div className="prose prose-lg text-gray-600 space-y-6">
-                        <p>
-                            {t({
-                                en: "The Movement Diagnosis and Rehabilitation Engineering & Sport Science and Athletics Training laboratories (MDRE-SSAT) form an integrated research group operating under the National Taiwan University of Science and Technology (NTUST). Their research focuses on advancing human performance, injury prevention, and movement rehabilitation through scientific, engineering, and data-driven approaches.",
-                                zh: "國立臺灣科技大學（NTUST）旗下的動作診斷暨復健工程實驗室（MDRE）與運動科學暨運動防護實驗室（SSAT）共同組成 MDRE-SSAT 整合研究團隊。研究方向聚焦於透過科學方法、工程技術與資料導向的策略，推動人類表現提升、運動傷害預防與復健相關領域的發展。"
-                            })}
-                        </p>
-                        <p>
-                            {t({
-                                en: "Our goal is to bridge the gap between science, technology, and real-world practice, empowering individuals from elite athletes to everyday workers to move stronger, safer, and smarter.",
-                                zh: "我們的目標是縮短科學研究、技術創新與實務應用之間的距離，協助從菁英運動員到一般工作者，都能以更強壯、更安全、更聰明的方式進行活動與訓練。"
-                            })}
-                        </p>
-                    </div>
-                </section>
-
-                {/* Sub Section: New Initiative */}
-                <section className="border-t border-gray-100 pt-12">
-                    <h2 className="text-3xl font-bold text-blue-600 mb-8">
-                        {t({
-                            en: "Empowering Women to Shine with Strength and Grace",
-                            zh: "守護無限綻放的力與美"
-                        })}
-                    </h2>
-
                     <div className="prose prose-lg text-gray-600 space-y-8">
-                        <p className="font-medium text-gray-800 text-xl">
+                        <div>
                             {t({
-                                en: "The labs are also leading a new initiative, “Empowering Women to Shine with Strength and Grace,” a project dedicated to supporting and advancing the health, performance, and training of female triathletes.",
-                                zh: "此外，實驗室亦正領導一項新的研究計畫 「守護無限綻放的力與美」，致力於支持並提升女性鐵人三項運動員的健康、表現與訓練品質。"
+                                en: (
+                                    <>
+                                        <p>
+                                            Movement Diagnosis and Rehabilitation Engineering & Sport Science and Athletics Training (MDRE-SSAT) is an interdisciplinary research platform based at National Taiwan University of Science and Technology (NTUST).
+                                        </p>
+                                        <p className="mt-4">
+                                            It was established as a formal collaboration between two laboratories at NTUST:
+                                        </p>
+                                        <ul className="list-disc pl-6 mt-2">
+                                            <li>Movement Diagnosis and Rehabilitation Engineering Laboratory (MDRE)</li>
+                                            <li>Sport Science and Athletics Training Laboratory (SSAT)</li>
+                                        </ul>
+                                        <p className="mt-4">
+                                            By combining expertise from engineering, biomechanics, and sport science, MDRE-SSAT serves as a unified framework for research on human movement, athletic performance, and rehabilitation.
+                                        </p>
+                                    </>
+                                ),
+                                zh: (
+                                    <>
+                                        <p className="font-bold text-xl mb-2 text-gray-800">動作診斷暨復健工程與運動科學暨運動防護實驗室</p>
+                                        <p className="text-sm opacity-80 mb-4 italic">Movement Diagnosis and Rehabilitation Engineering & Sport Science and Athletics Training, MDRE-SSAT</p>
+                                        <p>
+                                            是一個設立於 國立臺灣科技大學（NTUST）的跨領域研究平台。
+                                        </p>
+                                        <p className="mt-4">
+                                            MDRE-SSAT 由台科大校內兩個實驗室共同合作成立，整合彼此的研究專長：
+                                        </p>
+                                        <ul className="list-disc pl-6 mt-2">
+                                            <li>動作診斷暨復健工程實驗室（MDRE）</li>
+                                            <li>運動科學暨運動防護實驗室（SSAT）</li>
+                                        </ul>
+                                        <p className="mt-4">
+                                            透過工程、運動科學與生物力學的深度結合，MDRE-SSAT 致力於推動人體動作分析、運動表現評估與復健工程相關研究。
+                                        </p>
+                                    </>
+                                )
                             })}
-                        </p>
-
-                        <div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">
-                                {t({
-                                    en: "Female athletes are more prone than male athletes to:",
-                                    zh: "女性運動員比男性運動員更容易出現以下問題："
-                                })}
-                            </h3>
-                            <ul className="list-disc pl-6 space-y-2">
-                                {[
-                                    { en: "Stress fractures", zh: "壓力性骨折" },
-                                    { en: "Anterior cruciate ligament (ACL) ruptures", zh: "前十字韌帶（ACL）斷裂" },
-                                    { en: "Concussion", zh: "腦震盪" },
-                                    { en: "Patellofemoral pain syndrome", zh: "髕股疼痛症候群" },
-                                    { en: "Ankle sprains", zh: "踝關節扭傷" }
-                                ].map((item, i) => (
-                                    <li key={i}>{t(item)}</li>
-                                ))}
-                            </ul>
                         </div>
 
-                        <div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">
-                                {t({
-                                    en: "Because of the biomechanical demands of swimming, cycling, and running, female triathletes are particularly likely to suffer from:",
-                                    zh: "由於游泳、騎車與跑步所產生的生物力學負荷，女性鐵人三項運動員特別容易受到以下傷害："
-                                })}
-                            </h3>
-                            <ul className="list-disc pl-6 space-y-2">
-                                {[
-                                    { en: "Stress fractures", zh: "壓力性骨折" },
-                                    { en: "Patellofemoral pain syndrome", zh: "髕股疼痛症候群" },
-                                    { en: "Ankle sprains", zh: "踝關節扭傷" }
-                                ].map((item, i) => (
-                                    <li key={i}>{t(item)}</li>
-                                ))}
-                            </ul>
+                        <div className="border-t border-gray-100 pt-8">
+                            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                                {t({ en: "Our Mission", zh: "我們的使命" })}
+                            </h2>
+                            {t({
+                                en: (
+                                    <p>
+                                        The mission of MDRE-SSAT is to bridge engineering innovation and applied sport science within NTUST, developing scientific methods and technological tools that support performance optimization, injury prevention, and rehabilitation across athletic and clinical populations.
+                                    </p>
+                                ),
+                                zh: (
+                                    <p>
+                                        MDRE-SSAT 的使命是在 台科大（NTUST）的學術環境中，連結工程創新與應用型運動科學，發展具科學依據的分析方法與技術工具，應用於運動表現優化、傷害預防與復健評估，涵蓋運動員與一般族群。
+                                    </p>
+                                )
+                            })}
                         </div>
 
-                        <div className="bg-blue-50 p-6 rounded-xl space-y-4">
-                            <p>
-                                {t({
-                                    en: "The prevalence of menstrual irregularities in female triathletes has been reported to be as high as 24%.",
-                                    zh: "研究顯示，女性鐵人三項運動員的月經不規律之盛行率可高達 24%。"
-                                })}
-                            </p>
-                            <p>
-                                {t({
-                                    en: "Among female triathletes, 40% reported a history of primary or secondary amenorrhea, with an average duration of 14 months.",
-                                    zh: "在女性鐵人三項運動員中，有 40% 回報曾出現初級或次級閉經，平均持續時間為 14 個月。"
-                                })}
-                            </p>
-                            <p>
-                                {t({
-                                    en: "Amenorrhea occurs in 3.4% to 66% of female athletes, compared with only 2% to 5% of women in the general population.",
-                                    zh: "女性運動員閉經發生率為 3.4% 至 66%，而一般女性族群僅為 2% 至 5%。"
-                                })}
-                            </p>
-                            <p>
-                                {t({
-                                    en: "Between 20% and 42% of athletes report that heavy bleeding negatively affects their sport performance.",
-                                    zh: "約有 20% 至 42% 的女性表示，經血過多會對其運動表現造成負面影響。"
-                                })}
-                            </p>
-                            <p className="font-semibold text-blue-800">
-                                {t({
-                                    en: "Athletes with oligomenorrhea or amenorrhea have been found to have an increased risk of stress fractures compared with eumenorrheic individuals.",
-                                    zh: "研究發現，具有寡經（oligomenorrhea）或閉經（amenorrhea）的女性運動員，其發生壓力性骨折的風險高於月經正常者。"
-                                })}
-                            </p>
+                        <div className="border-t border-gray-100 pt-8">
+                            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                                {t({ en: "Our Vision", zh: "我們的願景" })}
+                            </h2>
+                            {t({
+                                en: (
+                                    <p>
+                                        MDRE-SSAT aims to be a reference research hub within NTUST and beyond for technology-driven movement analysis, fostering collaboration among researchers, clinicians, coaches, and athletes. Through the integration of computer vision, signal processing, biomechanics, and physiological modeling, we strive to translate academic research into real-world applications.
+                                    </p>
+                                ),
+                                zh: (
+                                    <p>
+                                        MDRE-SSAT 期望成為校內外具代表性的 科技導向人體動作研究平台，促進研究人員、臨床專業人員、教練與運動員之間的跨領域合作。透過整合電腦視覺、訊號處理、生物力學與生理模型，我們致力於將學術研究成果轉化為實際可應用的解決方案。
+                                    </p>
+                                )
+                            })}
                         </div>
                     </div>
                 </section>

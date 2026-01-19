@@ -7,7 +7,7 @@ type Language = "en" | "zh";
 interface LanguageContextType {
     language: Language;
     setLanguage: (lang: Language) => void;
-    t: (textObj: { en: string; zh: string } | string) => string;
+    t: (textObj: { en: ReactNode; zh: ReactNode } | string) => ReactNode;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -15,7 +15,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     const [language, setLanguage] = useState<Language>("en");
 
-    const t = (textObj: { en: string; zh: string } | string) => {
+    const t = (textObj: { en: ReactNode; zh: ReactNode } | string): ReactNode => {
         if (typeof textObj === "string") return textObj;
         return textObj[language] || textObj.en;
     };

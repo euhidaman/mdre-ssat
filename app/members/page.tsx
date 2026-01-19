@@ -3,6 +3,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { members, Member } from "@/data/members";
 import Image from "next/image";
+import { ReactNode } from "react";
 
 export default function MembersPage() {
     const { t } = useLanguage();
@@ -49,7 +50,7 @@ export default function MembersPage() {
     );
 }
 
-function MemberSection({ title, members, t }: { title: string, members: Member[], t: any }) {
+function MemberSection({ title, members, t }: { title: ReactNode, members: Member[], t: any }) {
     if (members.length === 0) return null;
     return (
         <section className="mb-16">
